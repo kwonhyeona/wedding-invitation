@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'DeluxeEdition';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Deluxe Edition - Demo'),
+    url('https://fonts.cdnfonts.com/s/77933/Deluxe Edition - Demo.woff')
+      format('woff');
+}
+
 body {
   font-family: '-apple-system, SF Pro Text, SFNumber, Apple SD Gothic Neo, BlinkMacSystemFont, sans-serif';
 }

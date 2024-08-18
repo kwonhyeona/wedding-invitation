@@ -2,16 +2,16 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
+      "@/*": ["src/*"]
     },
     "outDir": "./build",
     "composite": true,
     "declaration": true,
     "target": "ESNext",
-    "lib": ["DOM", "DOM.Iterable","ESNext"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "typeRoots": ["node_modules/@types", "src/typings"],
+    "typeRoots": ["node_modules/@types", "./src/typings"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -33,6 +33,6 @@
     "allowImportingTsExtensions": true
   },
   "include": ["src/**/*", "**/*.json"],
-  "exclude": ["node_modules", "build","public"],
+  "exclude": ["node_modules", "build", "public"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

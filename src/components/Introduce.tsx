@@ -2,21 +2,16 @@ import mainSrc from '@/assets/main.jpg';
 
 const IntroduceSection = () => {
   return (
-    <div className="flex flex-col items-center justify-center py-16">
-      <div className="flex flex-row items-center justify-center gap-4 text-lg font-libre">
-        <h1>2024</h1>
-        <div className="w-[1px] h-4 bg-gray-900" aria-hidden />
-        <h1>10</h1>
-        <div className="w-[1px] h-4 bg-gray-900" aria-hidden />
-        <h1>20</h1>
-      </div>
-
-      <div className="font-libre text-gray-400 text-sm font-extralight my-2">
-        <h2>Sat. 15:20</h2>
-      </div>
-
-      <img className="rounded-full" src={mainSrc} alt="메인 사진" />
-      <h3>권현아 X 김기철</h3>
+    <div className="bg-yellow-100 text-gray-900  w-full flex flex-col items-center justify-center py-16 px-8">
+      <p className="font-deluxeEdition text-4xl mb-2">Wedding Day</p>
+      <h1 className="flex items-center justify-center gap-8 text-2xl">
+        <span>김기철</span>
+        <span>&</span>
+        <span>권현아</span>
+      </h1>
+      <img className="rounded-full my-4" src={mainSrc} alt="메인 사진" />
+      <h2 className="text-lg">2024년 10월 20일 (일) 15:20</h2>
+      <h2 className="text-lg mt-2">상록아트홀 5층 아트홀</h2>
     </div>
   );
 };
