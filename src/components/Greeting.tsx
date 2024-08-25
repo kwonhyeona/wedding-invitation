@@ -1,6 +1,6 @@
 const GreetingSection = () => {
   return (
-    <div className="bg-gray-100 text-gray-900 w-full flex flex-col items-center justify-center py-8">
+    <div className="bg-gray-100 text-gray-900 w-full flex flex-col items-center justify-center py-8 gap-4">
       <p className="text-2xl">인사말</p>
       <span>
         서로가 평생의 동반자가 된다는

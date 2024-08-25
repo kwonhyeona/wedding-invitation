@@ -7,7 +7,7 @@ import MapSection from '@/components/Map';
 
 function App() {
   return (
-    <div className="min-h-screen max-w-[600px] font-maruburi">
+    <div className="min-h-screen max-w-[600px] mx-auto font-maruburi">
       <IntroduceSection />
       <GreetingSection />
       <GallerySection />
