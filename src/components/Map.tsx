@@ -39,7 +39,13 @@ const MapSection = () => {
       <p className="text-2xl text-white font-bold">오시는 길</p>
       <button
         className="outline-none text-base font-medium text-white pt-4 pb-2"
-        onClick={() => copyText(ADDRESS)}
+        onClick={() =>
+          copyText({
+            text: ADDRESS,
+            successMessage: '주소를 복사했습니다',
+            errorMessage: '주소 복사에 실패했습니다',
+          })
+        }
       >
         "{ADDRESS}"
       </button>

@@ -34,7 +34,13 @@ const Account = ({ sideName, name, account }: AccountProps) => {
   return (
     <button
       className="w-full outline-0 border border-gray-900 bg-white text-gray-900 rounded-full text-base flex justify-center items-center p-4 font-bold gap-2"
-      onClick={() => copyText(account)}
+      onClick={() =>
+        copyText({
+          text: account,
+          successMessage: '계좌번호가 복사되었습니다',
+          errorMessage: '계좌번호 복사에 실패했습니다',
+        })
+      }
     >
       {sideName} <span className="font-medium">{name}</span>
       <CopyIcon />
@@ -77,7 +83,7 @@ const Bank = () => {
 
   return (
     <>
-      <div className="bg-gray-100 text-gray-900 w-full flex flex-col items-center justify-center py-8">
+      <div className="bg-gray-100 text-gray-900 w-full flex flex-col items-center justify-center py-16">
         <p className="text-2xl">마음 전하실 곳</p>
         <p className="text-sm py-4 text-gray-600">
           축복을 전달할 곳을 선택해주세요

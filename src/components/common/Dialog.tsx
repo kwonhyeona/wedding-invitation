@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 
 interface Props {
@@ -9,7 +9,7 @@ interface Props {
   footer: ReactNode;
 }
 
-const Dialog = ({ isOpen, setIsOpen, title, content, footer }: Props) => {
+const Dialog = ({ isOpen, title, content, footer }: Props) => {
   return createPortal(
     isOpen ? (
       <div

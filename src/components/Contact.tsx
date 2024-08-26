@@ -101,7 +101,7 @@ const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-emerald-50 text-gray-900 w-full flex flex-col items-center justify-center py-8">
+    <div className="bg-emerald-50 text-gray-900 w-full flex flex-col items-center justify-center py-16">
       <p className="text-2xl">연락하기</p>
       <div className="w-full flex flex-row justify-evenly items-center p-8 gap-4">
         <PersonInfo
