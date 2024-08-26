@@ -1,5 +1,8 @@
 import { useEffect, useRef } from 'react';
-import markerSrc from '@/assets/favicon.png';
+import markerSrc from '@/assets/map_pin3.png';
+import { copyText, callPhone } from '@/utils';
+
+const ADDRESS = '서울 강남구 언주로 508 상록회관 5층 아트홀';
 
 const MapSection = () => {
   const mapRef = useRef<HTMLDivElement>(null);
@@ -22,25 +25,34 @@ const MapSection = () => {
       map: map,
       icon: {
         url: markerSrc,
-        size: new naver.maps.Size(46, 54), // 이미지 크기
+        size: new naver.maps.Size(70, 70), // 이미지 크기
         scaledSize: new naver.maps.Size(46, 54), // 이미지 크기
         origin: new naver.maps.Point(0, 0),
-        anchor: new naver.maps.Point(30, 30),
+        anchor: new naver.maps.Point(30, 40),
       },
+      animation: naver.maps.Animation.BOUNCE,
     });
   }, []);
 
   return (
-    <div className="bg-white text-gray-900 flex flex-col items-center justify-center py-8">
-      <div className="w-full h-[400px] bg-white text-gray-900" ref={mapRef}>
-        지도입니다.
+    <div className="bg-orange-300 text-gray-900 flex flex-col items-center justify-center py-8">
+      <p className="text-2xl text-white font-bold">오시는 길</p>
+      <button
+        className="outline-none text-base font-medium text-white pt-4 pb-2"
+        onClick={() => copyText(ADDRESS)}
+      >
+        "{ADDRESS}"
+      </button>
+      <button
+        className="outline-none text-sm text-white"
+        onClick={() => callPhone('025645757')}
+      >
+        (TEL. 02-564-5757)
+      </button>
+      <div className="w-[calc(100%-2rem)] h-[400px]">
+        <div ref={mapRef} />
       </div>
-      <div className="flex flex-col justify-center items-center gap-2 pt-4">
-        <p className="text-lg">주소</p>
-        <p className="text-base font-extralight">
-          서울 강남구 언주로 508 상록회관 5층 아트홀
-        </p>
-      </div>
+      <div className="flex flex-col justify-center items-center gap-2 pt-4"></div>
     </div>
   );
 };
