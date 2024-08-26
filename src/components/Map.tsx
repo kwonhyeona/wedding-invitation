@@ -56,7 +56,7 @@ const MapSection = () => {
         (TEL. 02-564-5757)
       </button>
       <div className="w-[calc(100%-2rem)] h-[400px]">
-        <div ref={mapRef} />
+        <div className="w-full h-full my-4" ref={mapRef} />
       </div>
       <div className="flex flex-col justify-center items-center gap-2 pt-4"></div>
     </div>
