@@ -132,7 +132,7 @@ const Bank = () => {
     <>
       <div className="bg-gray-100 text-gray-900 w-full flex flex-col items-center justify-center py-16">
         <p className="text-2xl">마음 전하실 곳</p>
-        <p className="text-sm py-4 text-gray-600">
+        <p className="text-sm pt-4 text-gray-600">
           축복을 전달할 곳을 선택해주세요
         </p>
         <ul className="w-full flex flex-col justify-center items-center p-8 gap-2">
