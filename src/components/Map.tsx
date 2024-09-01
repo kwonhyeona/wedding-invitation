@@ -38,7 +38,7 @@ const MapSection = () => {
     <div className="bg-orange-300 text-gray-900 flex flex-col items-center justify-center py-8">
       <p className="text-2xl text-white font-bold">오시는 길</p>
       <button
-        className="outline-none text-base font-medium text-white pt-4 pb-2"
+        className="outline-none text-base font-medium text-white pt-4"
         onClick={() =>
           copyText({
             text: ADDRESS,
