@@ -6,7 +6,7 @@ import RightArrowIcon from '@/components/icons/RightArrowIcon';
 
 import image1 from '@/assets/1.jpg';
 import image2 from '@/assets/2.jpg';
-import image4 from '@/assets/4.jpg';
+import image4 from '@/assets/4.png';
 import image5 from '@/assets/4cut_2.jpeg';
 import image6 from '@/assets/4cut.jpeg';
 import image7 from '@/assets/5.jpg';
