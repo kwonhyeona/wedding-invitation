@@ -7,24 +7,24 @@ import RightArrowIcon from '@/components/icons/RightArrowIcon';
 import image1 from '@/assets/1.jpg';
 import image2 from '@/assets/2.jpg';
 import image4 from '@/assets/4.png';
-import image5 from '@/assets/4cut_2.jpeg';
-import image6 from '@/assets/4cut.jpeg';
-import image7 from '@/assets/5.jpg';
+import image5 from '@/assets/4cut_2.png';
+import image6 from '@/assets/4cut.png';
+import image7 from '@/assets/5.png';
 import image8 from '@/assets/6.png';
 import image9 from '@/assets/7.png';
-import image10 from '@/assets/bubble.jpg';
+import image10 from '@/assets/bubble.png';
 import image11 from '@/assets/IMG_1086.png';
-import image12 from '@/assets/IMG_4839.jpg';
-import image13 from '@/assets/IMG_4840.jpg';
-import image14 from '@/assets/IMG_4846.jpg';
-import image15 from '@/assets/IMG_4847.jpg';
-import image16 from '@/assets/IMG_4848.jpg';
-import image17 from '@/assets/IMG_4851.jpg';
-import image18 from '@/assets/IMG_4852.jpg';
+import image12 from '@/assets/IMG_4839.png';
+import image13 from '@/assets/IMG_4840.png';
+import image14 from '@/assets/IMG_4846.png';
+import image15 from '@/assets/IMG_4847.png';
+import image16 from '@/assets/IMG_4848.png';
+import image17 from '@/assets/IMG_4851.png';
+import image18 from '@/assets/IMG_4852.png';
 import image19 from '@/assets/IMG_0889.png';
-import image20 from '@/assets/IMG_1788.jpg';
+import image20 from '@/assets/IMG_1788.png';
 import image21 from '@/assets/IMG_1961.png';
-import image22 from '@/assets/photo_4.jpg';
+import image22 from '@/assets/photo_4.png';
 
 const PHOTOS = [
   image5,
