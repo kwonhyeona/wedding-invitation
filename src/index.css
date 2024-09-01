@@ -14,3 +14,7 @@
 body {
   font-family: '-apple-system, SF Pro Text, SFNumber, Apple SD Gothic Neo, BlinkMacSystemFont, sans-serif';
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}

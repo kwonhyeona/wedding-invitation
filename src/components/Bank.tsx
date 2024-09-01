@@ -1,7 +1,7 @@
 import { copyText } from '@/utils';
-import Dialog from '@/components/common/Dialog';
-import { useState } from 'react';
-import CopyIcon from '@/components/icons/CopyIcon';
+import { MouseEvent, useState } from 'react';
+import UpArrowIcon from '@/components/icons/UpArrowIcon';
+import DownArrowIcon from '@/components/icons/DownArrowIcon';
 
 const BANK_INFO: Record<'BRIDE' | 'GROOM', ParentInfoProps> = {
   BRIDE: {
@@ -31,20 +31,32 @@ interface AccountProps {
 }
 
 const Account = ({ sideName, name, account }: AccountProps) => {
+  const onClick = (event: MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    copyText({
+      text: account,
+      successMessage: '계좌번호가 복사되었습니다',
+      errorMessage: '계좌번호 복사에 실패했습니다',
+    });
+  };
+
   return (
-    <button
-      className="w-full outline-0 border border-gray-900 bg-white text-gray-900 rounded-full text-base flex justify-center items-center p-4 font-bold gap-2"
-      onClick={() =>
-        copyText({
-          text: account,
-          successMessage: '계좌번호가 복사되었습니다',
-          errorMessage: '계좌번호 복사에 실패했습니다',
-        })
-      }
-    >
-      {sideName} <span className="font-medium">{name}</span>
-      <CopyIcon />
-    </button>
+    <p className="w-full flex justify-center items-center text-gray-900 p-4">
+      <div className="flex flex-col justify-center gap-1 grow text-sm font-light">
+        <span>
+          {sideName} {name}
+        </span>
+        <span className="text-base font-normal">{account}</span>
+      </div>
+      <button
+        className="bg-gray-100 outline-none rounded p-3"
+        onClick={onClick}
+      >
+        복사
+      </button>
+    </p>
   );
 };
 
@@ -68,19 +80,54 @@ const ParentInfo = ({
   fatherAccount,
   motherAccount,
 }: ParentInfoProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="flex flex-col justify-center items-center my-4 gap-4">
-      <Account sideName={sideName} name={name} account={account} />
-      <Account sideName="아버지" name={fatherName} account={fatherAccount} />
-      <Account sideName="어머니" name={motherName} account={motherAccount} />
-    </div>
+    <li
+      className={
+        'w-full flex flex-col justify-center items-center bg-white text-gray-900 text-base font-bold overflow-hidden rounded-2xl border border-gray-900'
+      }
+    >
+      <button
+        className={
+          'w-full outline-0 flex justify-center items-center gap-2 p-4'
+        }
+        onClick={() => {
+          setIsOpen(prev => !prev);
+        }}
+      >
+        {sideName} 측 계좌번호 보기
+        {isOpen ? (
+          <UpArrowIcon width="16px" height="16px" />
+        ) : (
+          <DownArrowIcon width="16px" height="16px" />
+        )}
+      </button>
+      {isOpen && (
+        <>
+          <hr className="w-full border-gray-900" />
+          <div className="w-full flex flex-col justify-center items-center my-4 gap-1">
+            <Account sideName={sideName} name={name} account={account} />
+            <hr className="w-[calc(100%-2rem)] border-gray-300" />
+            <Account
+              sideName="아버지"
+              name={fatherName}
+              account={fatherAccount}
+            />
+            <hr className="w-[calc(100%-2rem)] border-gray-300" />
+            <Account
+              sideName="어머니"
+              name={motherName}
+              account={motherAccount}
+            />
+          </div>
+        </>
+      )}
+    </li>
   );
 };
 
 const Bank = () => {
-  const [mode, setMode] = useState<'BRIDE' | 'GROOM'>('BRIDE');
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
       <div className="bg-gray-100 text-gray-900 w-full flex flex-col items-center justify-center py-16">
@@ -88,44 +135,11 @@ const Bank = () => {
         <p className="text-sm py-4 text-gray-600">
           축복을 전달할 곳을 선택해주세요
         </p>
-        <div className="w-full flex flex-col justify-center items-center p-8 gap-4">
-          <button
-            className="w-full outline-0 border border-gray-900 bg-white text-gray-900 rounded-full text-base flex justify-center items-center p-4 font-bold gap-2"
-            onClick={() => {
-              setMode('GROOM');
-              setIsOpen(true);
-            }}
-          >
-            신랑 측 계좌번호 보기
-          </button>
-          <button
-            className="w-full outline-0 border border-gray-900 bg-white text-gray-900 rounded-full text-base flex justify-center items-center p-4 font-bold gap-2"
-            onClick={() => {
-              setMode('BRIDE');
-              setIsOpen(true);
-            }}
-          >
-            신부 측 계좌번호 보기
-          </button>
-        </div>
+        <ul className="w-full flex flex-col justify-center items-center p-8 gap-2">
+          <ParentInfo {...BANK_INFO['GROOM']} />
+          <ParentInfo {...BANK_INFO['BRIDE']} />
+        </ul>
       </div>
-      <Dialog
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-        title={`${mode === 'BRIDE' ? `신부` : '신랑'} 측 계좌번호`}
-        content={<ParentInfo {...BANK_INFO[mode]} />}
-        footer={
-          <button
-            className="rounded-lg bg-green-400 py-3 px-6 font-sans text-sm font-bold uppercase text-white transition-all active:opacity-[0.85]"
-            onClick={() => {
-              console.log('zmfflrehla');
-              setIsOpen(false);
-            }}
-          >
-            확인
-          </button>
-        }
-      />
     </>
   );
 };
