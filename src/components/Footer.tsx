@@ -4,7 +4,7 @@ import brotherSrc from '@/assets/thanks/IMG_2248.png';
 
 const Footer = () => {
   return (
-    <div className="bg-lime-600 text-white w-full flex flex-col items-center justify-center py-8">
+    <div className="bg-lime-600 text-white w-full flex flex-col items-center justify-center py-8 pb-[calc(2rem+env(safe-area-inset-bottom))]">
       <p className="font-deluxeEdition text-3xl mb-4">Special Thanks To</p>
       <div className="w-full flex flex-row justify-evenly items-center px-8">
         <div className="flex flex-col items-center justify-center gap-2">
