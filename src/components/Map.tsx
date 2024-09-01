@@ -49,16 +49,20 @@ const MapSection = () => {
       >
         "{ADDRESS}"
       </button>
+
       <button
-        className="outline-none text-sm text-white"
+        className="outline-none text-sm text-white mb-4"
         onClick={() => callPhone('025645757')}
       >
         (TEL. 02-564-5757)
       </button>
       <div className="w-[calc(100%-2rem)] h-[400px]">
-        <div className="w-full h-full my-4" ref={mapRef} />
+        <div className="w-full h-full" ref={mapRef} />
       </div>
-      <div className="flex flex-col justify-center items-center gap-2 pt-4"></div>
+      <p className="mt-2 text-sm font-light text-white">
+        <b className="font-bold">선릉역 5번출구</b>에서 웨딩홀 셔틀버스가
+        운행됩니다.
+      </p>
     </div>
   );
 };

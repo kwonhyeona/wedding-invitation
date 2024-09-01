@@ -22,17 +22,8 @@ const PersonInfo = ({
   src,
   description,
 }: PersonInfoProps) => {
-  // const onClickBank = () => async () => {
-  //   try {
-  //     await navigator.clipboard.writeText(bank);
-  //     window.alert('계좌번호가 복사되었습니다.');
-  //   } catch (err) {
-  //     window.alert('계좌번호 복사를 실패했습니다.');
-  //   }
-  // };
-
   return (
-    <div className="shrink-1 basis-0 max-w-48 grow flex flex-col justify-center items-center gap-4">
+    <div className="shrink-1 basis-0 max-w-48 grow flex flex-col justify-center items-center">
       <img
         className="rounded-full object-cover"
         src={src}
@@ -41,14 +32,13 @@ const PersonInfo = ({
         alt=""
       />
 
-      <button
-        className="outline-0 flex flex-row justify-center items-center gap-1"
-        onClick={() => callPhone(phone)}
-      >
-        <p className="font-semibold text-sm">
-          {positionName} <span className="text-lg">{name}</span>
-        </p>
-        <PhoneIcon width="20px" height="20px" />
+      <button className="outline-0 pt-4 pb-2" onClick={() => callPhone(phone)}>
+        <mark className="highlight flex flex-row justify-center items-center gap-1">
+          <p className="font-semibold text-sm">
+            {positionName} <span className="text-lg">{name}</span>
+          </p>
+          <PhoneIcon width="20px" height="20px" />
+        </mark>
       </button>
       <p className="text-center text-sm">{description}</p>
     </div>
@@ -73,9 +63,9 @@ const ParentInfo = ({
   return (
     <div className="flex flex-col justify-center items-center">
       <p className="text-base">{sideName} 측 혼주</p>
-      <div className="flex flex-col justify-center items-center my-4 gap-2">
+      <div className="flex flex-col justify-center items-center mt-4 mb-6 gap-2">
         <button
-          className="outline-0 flex flex-row justify-center items-center gap-1"
+          className="outline-0 flex flex-row justify-center items-center gap-1 rounded-full p-2 border border-gray-500 bg-white"
           onClick={() => callPhone(fatherPhone)}
         >
           <p className="text-sm">
@@ -84,7 +74,7 @@ const ParentInfo = ({
           <PhoneIcon width="20px" height="20px" />
         </button>
         <button
-          className="outline-0 flex flex-row justify-center items-center gap-1"
+          className="outline-0 flex flex-row justify-center items-center gap-1 rounded-full p-2 border border-gray-500 bg-white"
           onClick={() => callPhone(motherPhone)}
         >
           <p className="text-sm">
@@ -103,12 +93,11 @@ const Contact = () => {
   return (
     <div className="bg-emerald-50 text-gray-900 w-full flex flex-col items-center justify-center py-16">
       <p className="text-2xl">연락하기</p>
-      <div className="w-full flex flex-row justify-evenly items-center p-8 gap-4">
+      <div className="w-full flex flex-row justify-evenly items-center pt-10 pb-16 px-8 gap-4">
         <PersonInfo
           positionName="신랑"
           name="김기철"
           phone="01045401708"
-          // bank="카카오뱅크 3333050804346"
           description={
             <>
               현아의 개그맨이
@@ -122,7 +111,6 @@ const Contact = () => {
           positionName="신부"
           name="권현아"
           phone="01040908370"
-          // bank="카카오뱅크 3333014717936"
           description={
             <>
               기철이의 자랑이
@@ -135,7 +123,7 @@ const Contact = () => {
       </div>
       <div className="h-px w-[calc(100%-2rem)] bg-gray-500 box-border" />
       <button
-        className="text-gray-600 text-sm m-3 w-full flex justify-center items-center gap-2"
+        className="text-gray-600 text-sm p-4 w-full flex justify-center items-center gap-2"
         onClick={() => setIsOpen(prev => !prev)}
       >
         혼주에게 연락하기 (클릭)

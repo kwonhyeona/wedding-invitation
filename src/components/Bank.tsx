@@ -108,13 +108,13 @@ const ParentInfo = ({
           <hr className="w-full border-gray-900" />
           <div className="w-full flex flex-col justify-center items-center my-4 gap-1">
             <Account sideName={sideName} name={name} account={account} />
-            <hr className="w-[calc(100%-2rem)] border-gray-300" />
+            <hr className="w-[calc(100%-2rem)] border-t-[0.5px] border-gray-300" />
             <Account
               sideName="아버지"
               name={fatherName}
               account={fatherAccount}
             />
-            <hr className="w-[calc(100%-2rem)] border-gray-300" />
+            <hr className="w-[calc(100%-2rem)] border-t-[0.5px] border-gray-300" />
             <Account
               sideName="어머니"
               name={motherName}
