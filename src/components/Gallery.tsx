@@ -77,7 +77,7 @@ const GallerySection = () => {
         {PHOTOS.map(src => (
           <SwiperSlide>
             <img
-              className="w-full h-[130vw] object-contain"
+              className="w-full h-[70vh] object-contain"
               key={src}
               src={src}
               alt=""
