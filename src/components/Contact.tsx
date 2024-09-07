@@ -65,7 +65,7 @@ const ParentInfo = ({
       <p className="text-base">{sideName} 측 혼주</p>
       <div className="flex flex-col justify-center items-center mt-4 mb-6 gap-2">
         <button
-          className="outline-0 flex flex-row justify-center items-center gap-1 rounded-full p-2 border border-gray-500 bg-white"
+          className="outline-0 flex flex-row justify-center items-center gap-1 rounded-full p-2 shadow-sm bg-white"
           onClick={() => callPhone(fatherPhone)}
         >
           <p className="text-sm">
@@ -74,7 +74,7 @@ const ParentInfo = ({
           <PhoneIcon width="20px" height="20px" />
         </button>
         <button
-          className="outline-0 flex flex-row justify-center items-center gap-1 rounded-full p-2 border border-gray-500 bg-white"
+          className="outline-0 flex flex-row justify-center items-center gap-1 rounded-full p-2 shadow-sm bg-white"
           onClick={() => callPhone(motherPhone)}
         >
           <p className="text-sm">
@@ -91,7 +91,7 @@ const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-emerald-50 text-gray-900 w-full flex flex-col items-center justify-center py-16">
+    <div className="bg-stone-50 text-gray-900 w-full flex flex-col items-center justify-center py-16">
       <p className="text-2xl">연락하기</p>
       <div className="w-full flex flex-row justify-evenly items-center pt-10 pb-16 px-8 gap-4">
         <PersonInfo
@@ -128,9 +128,9 @@ const Contact = () => {
       >
         혼주에게 연락하기 (클릭)
         {isOpen ? (
-          <UpArrowIcon width="20px" height="20px" color="#4b5563" />
+          <UpArrowIcon width="14px" height="14px" color="#4b5563" />
         ) : (
-          <DownArrowIcon width="20px" height="20px" color="#4b5563" />
+          <DownArrowIcon width="14px" height="14px" color="#4b5563" />
         )}
       </button>
 

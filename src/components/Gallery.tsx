@@ -16,7 +16,7 @@ import image10 from '@/assets/bubble.png';
 import image11 from '@/assets/IMG_1086.png';
 import image12 from '@/assets/IMG_4839.png';
 import image13 from '@/assets/IMG_4840.png';
-import image14 from '@/assets/IMG_4846.png';
+import image14 from '@/assets/IMG_5826.jpg';
 import image15 from '@/assets/IMG_4847.png';
 import image16 from '@/assets/IMG_4848.png';
 import image17 from '@/assets/IMG_4851.png';
@@ -25,21 +25,23 @@ import image19 from '@/assets/IMG_0889.png';
 import image20 from '@/assets/IMG_1788.png';
 import image21 from '@/assets/IMG_1961.png';
 import image22 from '@/assets/photo_4.png';
+import image23 from '@/assets/NC6_3791.jpg';
 
 const PHOTOS = [
-  image5,
-  image4,
+  image23,
   image6,
+  image14,
+  image4,
   image21,
   image11,
   image12,
   image19,
   image13,
-  image14,
   image15,
   image16,
   image17,
   image18,
+  image5,
   image22,
   image2,
   image1,
@@ -55,6 +57,7 @@ const GallerySection = () => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
   const nextNavigationRef = useRef(null);
   const prevNavigationRef = useRef(null);
+  const photoContainerRef = useRef<HTMLDivElement>(null);
 
   console.log(currentIndex);
 
@@ -99,13 +102,20 @@ const GallerySection = () => {
           <RightArrowIcon width="20px" height="20px" color="#111827" />
         </button>
       </Swiper>
-      <div className="w-full overflow-x-scroll flex gap-2 mt-4">
+      <div
+        className="w-full overflow-x-scroll flex gap-2 mt-4"
+        ref={photoContainerRef}
+      >
         {PHOTOS.map((src, index) => (
           <img
             role="button"
             onClick={() => {
               console.log('index', index);
               swiper?.slideTo(index);
+              photoContainerRef.current?.scrollTo({
+                behavior: 'smooth',
+                left: 50 * index + 8 * (index - 1) - window.innerWidth / 2 + 25,
+              });
             }}
             key={src}
             className="object-cover"
