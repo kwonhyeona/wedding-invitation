@@ -1,6 +1,6 @@
 import leeaieanSrc from '@/assets/thanks/IMG_5562.jpg';
 import bandSrc from '@/assets/thanks/IMG_5296.jpg';
-import brotherSrc from '@/assets/thanks/IMG_2248.png';
+import brotherSrc from '@/assets/thanks/brother.png';
 import CopyrightIcon from '@/components/icons/CopyrightIcon';
 
 const Footer = () => {
@@ -36,10 +36,10 @@ const Footer = () => {
         </div>
       </div>
       <p className="pt-4 flex items-center justify-center gap-1">
-        <CopyrightIcon color="#ffffff" width="14px" height="14px" />
-        <span className="font-deluxeEdition text-2xl">
-          made by hyeona & kicheol
-        </span>
+        <CopyrightIcon color="#ffffff" width="10px" height="10px" />
+        <span className="font-deluxeEdition text-2xl pt-1">made by hyeona</span>
+        <span className="text-xs">&</span>
+        <span className="font-deluxeEdition text-2xl pt-1">kicheol</span>
       </p>
     </div>
   );

@@ -84,12 +84,3 @@ body::-webkit-scrollbar {
   background: url('/favicon.png');
   background-size: 100%;
 }
-
-.react-calendar__navigation__label {
-  padding-bottom: 1rem;
-}
-
-.react-calendar__navigation__label > span {
-  height: fit-content;
-  display: inline-block;
-}
