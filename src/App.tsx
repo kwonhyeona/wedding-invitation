@@ -26,8 +26,8 @@ function App() {
       <IntroduceSection />
       <GreetingSection />
       <ContactSection />
-      <GallerySection />
       <CalendarSection />
+      <GallerySection />
       <MapSection />
       <BankSection />
       <Footer />

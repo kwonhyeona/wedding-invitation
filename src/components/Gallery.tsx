@@ -1,6 +1,6 @@
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import LeftArrowIcon from '@/components/icons/LeftArrowIcon';
 import RightArrowIcon from '@/components/icons/RightArrowIcon';
 
@@ -59,7 +59,16 @@ const GallerySection = () => {
   const prevNavigationRef = useRef(null);
   const photoContainerRef = useRef<HTMLDivElement>(null);
 
-  console.log(currentIndex);
+  const scrollPhotos = (index: number) => {
+    photoContainerRef.current?.scrollTo({
+      behavior: 'smooth',
+      left: 50 * index + 8 * (index - 1) - window.innerWidth / 2 + 25,
+    });
+  };
+
+  useEffect(() => {
+    scrollPhotos(currentIndex);
+  }, [currentIndex]);
 
   return (
     <div className="bg-gray-100 text-gray-900 w-full flex flex-col items-center justify-center py-16">
@@ -78,7 +87,7 @@ const GallerySection = () => {
         loop
       >
         {PHOTOS.map(src => (
-          <SwiperSlide>
+          <SwiperSlide key={src}>
             <img
               className="w-full h-[70vh] object-contain"
               key={src}
@@ -110,12 +119,8 @@ const GallerySection = () => {
           <img
             role="button"
             onClick={() => {
-              console.log('index', index);
               swiper?.slideTo(index);
-              photoContainerRef.current?.scrollTo({
-                behavior: 'smooth',
-                left: 50 * index + 8 * (index - 1) - window.innerWidth / 2 + 25,
-              });
+              scrollPhotos(index);
             }}
             key={src}
             className="object-cover"
