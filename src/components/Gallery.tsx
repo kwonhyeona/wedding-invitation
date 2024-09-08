@@ -22,7 +22,7 @@ import image16 from '@/assets/IMG_4848.png';
 import image17 from '@/assets/IMG_4851.png';
 import image18 from '@/assets/IMG_4852.png';
 import image19 from '@/assets/IMG_0889.png';
-import image20 from '@/assets/IMG_1788.png';
+import image20 from '@/assets/IMG_1788.jpg';
 import image21 from '@/assets/IMG_1961.png';
 import image22 from '@/assets/photo_4.png';
 import image23 from '@/assets/NC6_3791.jpg';
