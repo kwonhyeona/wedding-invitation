@@ -3,7 +3,7 @@ import Calendar from 'react-calendar';
 import 'dayjs/locale/en';
 
 const CalendarSection = () => {
-  const weddingDay = new Date('2024-10-20 15:30:00');
+  const weddingDay = new Date('2024-10-20 15:20:00');
 
   return (
     <div className="bg-stone-50 text-gray-900 flex flex-col items-center justify-center pb-16">
