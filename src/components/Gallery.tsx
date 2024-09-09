@@ -83,7 +83,7 @@ const GallerySection = () => {
         modules={[Navigation, Pagination]}
         slidesPerView={1}
         onSwiper={setSwiper}
-        onSlideChange={swiper => setCurrentIndex(swiper.activeIndex)}
+        onSlideChange={swiper => setCurrentIndex(swiper.realIndex)}
         loop
       >
         {PHOTOS.map(src => (
