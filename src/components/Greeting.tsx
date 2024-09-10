@@ -16,7 +16,22 @@ const GreetingSection = () => {
         <br />
         저희의 앞날을 함께 축복해주시면 감사하겠습니다.
       </span>
-      <p className="w-full text-right text-xs pt-2">기철, 현아 올림</p>
+      <div className="flex flex-col justify-center items-end text-xs pt-4">
+        <span>
+          <span className="text-sm font-medium">김태형·이정금</span>의
+          <span className="inline-block w-[21px] pl-1 pr-3 box-content">
+            아들
+          </span>
+          <span className="text-sm font-medium">기철</span>
+        </span>
+        <span>
+          <span className="text-sm font-medium">권혁민·장남숙</span>의
+          <span className="inline-block w-[21px] pl-1 pr-3 box-content text-right">
+            딸
+          </span>
+          <span className="text-sm font-medium">현아</span>
+        </span>
+      </div>
     </div>
   );
 };

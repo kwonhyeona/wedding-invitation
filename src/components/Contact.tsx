@@ -37,7 +37,7 @@ const PersonInfo = ({
           <p className="font-semibold text-sm">
             {positionName} <span className="text-lg">{name}</span>
           </p>
-          <PhoneIcon width="20px" height="20px" />
+          <PhoneIcon width="18px" height="18px" />
         </mark>
       </button>
       <p className="text-center text-sm">{description}</p>
@@ -65,7 +65,7 @@ const ParentInfo = ({
       <p className="text-base">{sideName} 측 혼주</p>
       <div className="flex flex-col justify-center items-center mt-4 mb-6 gap-2">
         <button
-          className="outline-0 flex flex-row justify-center items-center gap-1 rounded-full p-2 shadow-sm bg-white"
+          className="outline-0 flex flex-row justify-center items-center gap-1 rounded-full py-2 px-4 shadow-sm bg-white"
           onClick={() => callPhone(fatherPhone)}
         >
           <p className="text-sm">
@@ -74,7 +74,7 @@ const ParentInfo = ({
           <PhoneIcon width="20px" height="20px" />
         </button>
         <button
-          className="outline-0 flex flex-row justify-center items-center gap-1 rounded-full p-2 shadow-sm bg-white"
+          className="outline-0 flex flex-row justify-center items-center gap-1 rounded-full py-2 px-4 shadow-sm bg-white"
           onClick={() => callPhone(motherPhone)}
         >
           <p className="text-sm">

@@ -59,10 +59,31 @@ const MapSection = () => {
       <div className="w-[calc(100%-2rem)] h-[400px]">
         <div className="w-full h-full" ref={mapRef} />
       </div>
-      <p className="mt-2 text-sm font-light text-white">
-        <b className="font-bold">선릉역 5번출구</b>에서 웨딩홀 셔틀버스가
-        운행됩니다.
-      </p>
+      <div className="w-full text-sm font-light text-white mt-4 px-4">
+        <p className="flex justify-start items-start gap-4">
+          <span className="font-bold shrink-0 basis-[50px]">지 하 철</span>
+          <span>2호선/분당선 선릉역 5번 출구 (도보 5분)</span>
+        </p>
+        <p className="flex justify-start items-start gap-4 pt-1 pb-8">
+          <span className="font-bold shrink-0 basis-[50px] flex gap-5">
+            <span>버</span>
+            <span>스</span>
+          </span>
+          <p className="flex flex-col">
+            <span>
+              KT 강남지사 하차: 141(도봉산 ↔ 염곡동), 6411(신정동 ↔ 선릉역)
+            </span>
+            <span>
+              한국기술센터, 상록회관 하차: 141(도봉산 ↔ 염곡동), 6411(신정동 ↔
+              선릉역)
+            </span>
+          </p>
+        </p>
+        <p className="text-center">
+          <b className="font-bold">선릉역 5번출구</b>에서 웨딩홀 셔틀버스가
+          운행됩니다.
+        </p>
+      </div>
     </div>
   );
 };
