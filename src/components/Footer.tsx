@@ -6,7 +6,9 @@ import CopyrightIcon from '@/components/icons/CopyrightIcon';
 const Footer = () => {
   return (
     <div className="bg-lime-600 text-white w-full flex flex-col items-center justify-center pt-8 pb-[calc(1rem+env(safe-area-inset-bottom))]">
-      <p className="font-deluxeEdition text-3xl mb-4">Special Thanks To</p>
+      <p id="hyeona" className="font-deluxeEdition text-3xl mb-4">
+        Special Thanks To
+      </p>
       <div className="w-full flex flex-row justify-evenly items-center px-8">
         <div className="flex flex-col items-center justify-center gap-2">
           <div className="rounded-full overflow-hidden">
