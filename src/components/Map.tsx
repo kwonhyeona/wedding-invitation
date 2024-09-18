@@ -12,7 +12,7 @@ const MapSection = () => {
 
     const map = new window.naver.maps.Map(mapRef.current, {
       center: new naver.maps.LatLng(37.5038913, 127.0429552),
-      zoom: 17,
+      zoom: 14,
       scaleControl: true,
       zoomControl: true,
       zoomControlOptions: {
