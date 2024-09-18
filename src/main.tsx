@@ -9,16 +9,17 @@ import 'swiper/css/pagination';
 import App from '@/App';
 import dayjs from 'dayjs';
 
+import titleSrc from '@/assets/title.png';
+
 import 'dayjs/locale/ko';
 dayjs.locale('ko');
 
-const start = async () => {
-  await (document as any).fonts.ready;
+const image = new Image();
+image.src = titleSrc;
+image.onload = () => {
   ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
       <App />
     </React.StrictMode>
   );
 };
-
-start();

@@ -6,7 +6,6 @@ export default {
       fontFamily: {
         libre: ['Libre Baskerville'],
         maruburi: ['MaruBuri'],
-        deluxeEdition: ['DeluxeEdition'],
       },
     },
   },
