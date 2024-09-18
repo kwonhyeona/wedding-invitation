@@ -1,11 +1,10 @@
 import mainSrc from '@/assets/main.jpg';
+import titleSrc from '@/assets/title.png';
 
 const IntroduceSection = () => {
   return (
     <div className="bg-yellow-100 text-gray-900  w-full flex flex-col items-center justify-center py-16 px-8">
-      <p className="font-deluxeEdition text-6xl mb-2 max-h-[60px]">
-        Wedding Day
-      </p>
+      <img className="mb-2" src={titleSrc} alt="wedding day" width="270px" />
       <h1 className="flex items-center justify-center gap-8 text-2xl">
         <span>김기철</span>
         <span>&</span>

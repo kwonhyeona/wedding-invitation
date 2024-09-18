@@ -1,13 +1,14 @@
 import leeaieanSrc from '@/assets/thanks/IMG_5562.jpg';
 import bandSrc from '@/assets/thanks/IMG_5296.jpg';
 import brotherSrc from '@/assets/thanks/brother.png';
-import CopyrightIcon from '@/components/icons/CopyrightIcon';
+import copyrightSrc from '@/assets/copyright.png';
+import thanksSrc from '@/assets/thanks.png';
 
 const Footer = () => {
   return (
     <div className="bg-lime-600 text-white w-full flex flex-col items-center justify-center pt-8 pb-[calc(1rem+env(safe-area-inset-bottom))]">
-      <p id="hyeona" className="font-deluxeEdition text-3xl mb-4">
-        Special Thanks To
+      <p className="mb-4">
+        <img src={thanksSrc} alt="special thanks to" width={170} />
       </p>
       <div className="w-full flex flex-row justify-evenly items-center px-8">
         <div className="flex flex-col items-center justify-center gap-2">
@@ -38,10 +39,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="pt-4 flex items-center justify-center gap-1">
-        <CopyrightIcon color="#ffffff" width="10px" height="10px" />
-        <span className="font-deluxeEdition text-2xl pt-1">made by hyeona</span>
-        <span className="text-xs">&</span>
-        <span className="font-deluxeEdition text-2xl pt-1">kicheol</span>
+        <img src={copyrightSrc} alt="made by hyeona and kicheol" width={200} />
       </p>
     </div>
   );
