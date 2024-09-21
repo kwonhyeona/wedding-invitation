@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import markerSrc from '@/assets/map_pin3.png';
 import { copyText, callPhone } from '@/utils';
 
-const ADDRESS = '서울 강남구 언주로 508 상록회관 5층 아트홀';
+const ADDRESS = '서울 강남구 언주로 508 상록아트홀 5층 아트홀';
 
 const MapSection = () => {
   const mapRef = useRef<HTMLDivElement>(null);
