@@ -8,6 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import App from '@/App';
 import dayjs from 'dayjs';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 import titleSrc from '@/assets/title.png';
 
@@ -20,6 +21,7 @@ image.onload = () => {
   ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
       <App />
+      <SpeedInsights />
     </React.StrictMode>
   );
 };
