@@ -84,3 +84,7 @@ body::-webkit-scrollbar {
   background: url('/favicon.png');
   background-size: 100%;
 }
+
+.react-calendar__tile--now {
+  background: inherit;
+}
