@@ -140,7 +140,7 @@ const Contact = () => {
             sideName="신랑"
             fatherName="김태형"
             motherName="이정금"
-            fatherPhone="01094007737"
+            fatherPhone="01094667737"
             motherPhone="01090921708"
           />
           <ParentInfo
